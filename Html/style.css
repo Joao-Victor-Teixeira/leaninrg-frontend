@@ -1,0 +1,55 @@
+html {
+    background-color: yellow;
+    font-family: 'Verdana'
+}
+
+#divisao1 {
+    border: 1px solid black;
+    margin: 25px 20px 30px 20px;
+    padding: 10px 20px 15px 20px;
+}
+
+#divisao2 {
+    border: 2px solid red;
+    border-radius: 10px;
+}
+
+#divisao2:hover{
+   background-color: coral;
+}
+
+h3:hover{
+    visibility: hidden;
+}
+
+.classe1 {
+    background-color: blue;
+    color: white;
+}
+
+li{
+    display: inline;
+}
+
+a:link{
+    color: royalblue;
+    font-size: xx-large;
+}
+
+a:hover{
+    background-color: royalblue;
+    color: white;
+    font-size: xx-large;
+}
+
+a:visited{
+    color: white;
+}
+
+a:active{
+    color: red;
+}
+
+ol{
+    text-align: center;
+}
