@@ -3,13 +3,15 @@ import { RouterOutlet } from '@angular/router';
 import { Cabecalho } from './componentes/cabecalho/cabecalho';
 import { Rodape } from './componentes/rodape/rodape';
 import { Conteudo } from './componentes/conteudo/conteudo';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet,
     Cabecalho,
     Conteudo,
-    Rodape],
+    Rodape,
+    FormsModule],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
