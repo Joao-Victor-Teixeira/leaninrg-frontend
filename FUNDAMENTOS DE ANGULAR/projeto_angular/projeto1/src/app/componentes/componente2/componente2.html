@@ -1,2 +1,20 @@
+@if (loading){
+<div id="loader">
+
+    <span id="spinner"></span>
+    <button (click)="carregar()"> Continuar </button>
+
+</div>
+}
 <p>componente2 works!</p>
 <button (click)="enviarDados()"> Enviar Dados</button>
+
+<hr />
+<h3>Posts Recuperados</h3>
+<div>
+    @for (ITEM of lista; track ITEM.id) {
+    <p> {{ITEM.id}} - ({{ITEM.userId}}) {{ ITEM.title }} </p>
+    } @empty {
+    <p>Buscando dados no servidor... Aguarde.</p>
+    }
+</div>

@@ -16,8 +16,8 @@ export class PostService {
     return this.http.get<Post[]>("https://jsonplaceholder.typicode.com/posts");
   }
 
-  public adcionarPost(post: Post): Observable<Post>{
-    return this.http.post<Post>("https://jsonplaceholder.typicode.com/posts", post);
+  public adcionarPost(postagem: Post): Observable<Post>{
+    return this.http.post<Post>("https://jsonplaceholder.typicode.com/posts", postagem);
 
   }
 }

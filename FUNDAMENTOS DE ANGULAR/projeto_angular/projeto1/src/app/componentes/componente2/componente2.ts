@@ -11,19 +11,26 @@ import { Post } from '../../model/Post';
 })
 export class Componente2 implements OnInit {
   
-  public constructor(private service: PostService){
+  public lista: Post[];
+  public loading: boolean;
 
+  public constructor(private service: PostService){
+    this.lista = [];
+    this.loading = false;
   }
 
   ngOnInit(): void {
+    this.loading = true;
     this.service.consumirPosts().subscribe({
       next: (res: Post[]) => {
         console.log("Sucesso");
-        console.log(res);
+        this.lista = res;
+        this.loading = false;
       },
       error: (err: any) => {
         console.log("Erro");
         console.log(err);
+        this.loading = false
       }
     });
   }
@@ -44,5 +51,9 @@ export class Componente2 implements OnInit {
         console.log(err);
       }
     })
+  }
+
+  public carregar(){
+    this.loading = false;
   }
 }
