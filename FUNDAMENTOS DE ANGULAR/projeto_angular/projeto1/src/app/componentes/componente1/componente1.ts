@@ -1,14 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Filho } from '../filho/filho';
 
 @Component({
   selector: 'app-componente1',
-  imports: [],
+  imports: [Filho],
   templateUrl: './componente1.html',
   styleUrl: './componente1.css',
 })
 export class Componente1 implements OnInit {
   
+  public valor: number = 0;
+  public valorRecebido: number = 0;
+
   public constructor(private activatedRoute: ActivatedRoute){
     let p1: string;
     let p2: string;
@@ -24,4 +28,12 @@ export class Componente1 implements OnInit {
     
   }
 
+  public incrementa(): void{
+    this.valor++;
+  }
+
+  public trataEvento(valorVindoDoFilho:number){
+    console.log("Tratando evento recebido pelo filho = " + valorVindoDoFilho);
+    this.valorRecebido = valorVindoDoFilho;
+  }
 }
