@@ -11,7 +11,8 @@ import { FormsModule } from '@angular/forms';
     Cabecalho,
     Conteudo,
     Rodape,
-    FormsModule],
+    FormsModule
+    ],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

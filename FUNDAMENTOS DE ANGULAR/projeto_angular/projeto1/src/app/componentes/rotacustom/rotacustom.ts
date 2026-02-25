@@ -20,6 +20,6 @@ export class Rotacustom implements OnInit {
   }
 
   public navegar(): void{
-    this.router.navigate(['/link1'])
+    this.router.navigate(['/'])
   }
 }
